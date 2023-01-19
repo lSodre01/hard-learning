@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = 8000;
+const port = process.env.PORT;
 app.get("/", (req, res) => {
     res.send("Hard Learning Server");
 });
