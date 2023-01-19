@@ -12,3 +12,17 @@ produto.html
 
 routes
 produto
+
+----------------------------------------------------
+
+src
+app.ts
+
+modules
+    produto
+        produtoController
+        produtoModel
+        rota
+
+routes.ts
+    express.use
