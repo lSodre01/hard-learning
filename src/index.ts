@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 // importando as rotas
 
-import booksRouter from "./modules/Books/route"
+import router from "./routes"
 
 dotenv.config();
 
@@ -16,7 +16,7 @@ const port = process.env.PORT
 /*
  *  Rotas
  */
-app.use("/books", booksRouter)
+app.use("/", router)
 
 
 // Instancia Server

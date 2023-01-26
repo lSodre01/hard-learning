@@ -1,25 +1,30 @@
-const teste = {
+import { Request, Response } from "express"
 
-list: (req:any, res:any) => {
+const books = {
+
+list: (req: Request, res:Response) => {
+
     res.send("List books")
 },
 
-create: (req:any, res:any) =>{
+create: (req: Request, res:Response) =>{
+
     res.send("book successfully added")
 },
 
-update: (req:any, res:any) =>{
+update: (req:Request , res:Response) =>{
     res.send("the book has been updated")
 },
 
-detail: (req:any, res:any) =>{
-    res.send("book datail")
+detail: (req:Request , res:Response) =>{
+    let {id} = req.params
+    res.send("book datail:" + id)
 },
 
-delete: (req:any, res:any) =>{
+delete: (req:Request , res:Response) =>{
     res.send("the book has been deleted")
 }
 
 }
 
-export default teste
+export default books
